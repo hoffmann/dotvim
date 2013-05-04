@@ -55,8 +55,6 @@ endif
 " see http://stackoverflow.com/questions/4331776/change-vim-swap-backup-undo-file-name
 set backupdir=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-" viminfo stores the the state of your previous editing session
-set viminfo+=n~/.vim/viminfo
 
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
@@ -119,8 +117,8 @@ hi mkdLinkDefTarget guifg=Blue
 hi mkdID	guifg=Blue
 
 "fuer das popup menu. hintergrund dunkles grau, selektiertes item in gruen
-hi Pmenu guibg=#444444  
-hi PmenuSel guibg=Green
+hi Pmenu ctermbg=232 guibg=#444444  
+hi PmenuSel ctermbg=2 guibg=Green 
 
 " http://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim
 ":so $VIMRUNTIME/syntax/hitest.vim
