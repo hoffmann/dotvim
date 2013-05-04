@@ -16,7 +16,6 @@ set smartcase
 syntax on
 filetype plugin indent on
 
-
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -29,6 +28,8 @@ noremap <C-Enter> :Twrite 0<CR>
 
 inoremap <C-b> <ESC>:CtrlPBuffer<CR>
 noremap <C-b> :CtrlPBuffer<CR>
+
+
 
 if has("gui_running")
     " C-Space seems to work under gVim on both Linux and win32
@@ -51,7 +52,24 @@ endif
 "  \ 'link': 'some_bad_symbolic_links',
 "  \ }
 
+" see http://stackoverflow.com/questions/4331776/change-vim-swap-backup-undo-file-name
+set backupdir=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim/tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+" viminfo stores the the state of your previous editing session
+set viminfo+=n~/.vim/viminfo
 
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//
+  set undodir+=~/.vim/undo//
+  set undofile
+endif
 """""""""""""""""""""""""" Theme and Color Scheme """"""""""""""""""""""""
 " Fenstergroesse
 au GUIEnter * set lines=52 columns=90
