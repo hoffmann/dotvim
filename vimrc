@@ -117,7 +117,7 @@ hi mkdLinkDefTarget guifg=Blue
 hi mkdID	guifg=Blue
 
 "fuer das popup menu. hintergrund dunkles grau, selektiertes item in gruen
-hi Pmenu ctermbg=232 guibg=#444444  
+hi Pmenu ctermbg=232 ctermfg=white guibg=#444444  
 hi PmenuSel ctermbg=2 guibg=Green 
 
 " http://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim
