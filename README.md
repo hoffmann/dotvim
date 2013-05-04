@@ -18,8 +18,9 @@ Bundles
 	git clone https://github.com/tpope/vim-tbone.git
 	git clone https://github.com/tpope/vim-commentary.git
     git clone https://github.com/tristen/vim-sparkup.git
-
+    git clone https://github.com/edsono/vim-matchit.git
     git clone https://github.com/garbas/vim-snipmate.git
+    git clone https://github.com/Glench/Vim-Jinja2-Syntax.git
     #dependencies
     git clone https://github.com/tomtom/tlib_vim.git
     git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
