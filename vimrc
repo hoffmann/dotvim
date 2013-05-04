@@ -84,6 +84,7 @@ function! ToggleGUICruft()
   endif
 endfunction
 command! ToogleGUICruft call ToggleGUICruft()
+se go=
 
 " cursor see http://vim.sourceforge.net/tips/tip.php?tip_id=746 
 " and http://www.nabble.com/the-cursor-in-gvim-for-win32-td17234409.html
