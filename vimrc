@@ -15,6 +15,7 @@ set smartcase
 
 syntax on
 filetype plugin indent on
+imap <C-BS> <C-W>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -29,7 +30,7 @@ noremap <C-Enter> :Twrite 0<CR>
 inoremap <C-b> <ESC>:CtrlPBuffer<CR>
 noremap <C-b> :CtrlPBuffer<CR>
 
-
+imap <C-v> <ESC>"+pa
 
 if has("gui_running")
     " C-Space seems to work under gVim on both Linux and win32
@@ -76,15 +77,16 @@ au GUIEnter * set lines=52 columns=90
 "http://vim.runpaint.org/gui/maximising-screen-space/
 set guioptions-=T
 set guioptions-=M
-function! ToggleGUICruft()
-  if &go==''
-    exec('se go=mTrL')
-  else
-    exec('se go=')
-  endif
-endfunction
-command! ToogleGUICruft call ToggleGUICruft()
-se go=
+set guioptions-=r
+"function! ToggleGUICruft()
+"  if &go==''
+"    exec('se go=mTrL')
+"  else
+"    exec('se go=')
+"  endif
+"endfunction
+"command! ToogleGUICruft call ToggleGUICruft()
+"se go=
 
 " cursor see http://vim.sourceforge.net/tips/tip.php?tip_id=746 
 " and http://www.nabble.com/the-cursor-in-gvim-for-win32-td17234409.html
