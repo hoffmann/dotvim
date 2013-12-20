@@ -13,6 +13,8 @@ set history=1000
 set ignorecase 
 set smartcase
 
+let g:SimpylFold_docstring_preview = 1
+
 syntax on
 filetype plugin indent on
 imap <C-BS> <C-W>
@@ -31,6 +33,8 @@ inoremap <C-b> <ESC>:CtrlPBuffer<CR>
 noremap <C-b> :CtrlPBuffer<CR>
 
 imap <C-v> <ESC>"+pa
+
+map <C-n> :NERDTreeToggle<CR>
 
 if has("gui_running")
     " C-Space seems to work under gVim on both Linux and win32
@@ -119,6 +123,8 @@ hi mkdLinkDef   guifg=Blue
 hi mkdLinkDefTarget guifg=Blue
 hi mkdID	guifg=Blue
 
+hi Folded guibg=black 
+
 "fuer das popup menu. hintergrund dunkles grau, selektiertes item in gruen
 hi Pmenu ctermbg=232 ctermfg=white guibg=#444444  
 hi PmenuSel ctermbg=2 guibg=Green 
@@ -138,4 +144,5 @@ set statusline+=%1*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
 set statusline+=%1*\ %{&ff}\                              "FileFormat (dos/unix..) 
 set statusline+=%1*\ %{&spelllang}\  "Spellanguage & Highlight on?
 set statusline+=%1*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
+
 
