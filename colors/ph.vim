@@ -7,11 +7,17 @@
 "       Thanks to Ryan Heath for an easy list of some of the colours:
 "       http://rpheath.com/posts/356-github-theme-for-syntax-gem
 
-"http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+"""" display color scheme type under cursor
+" http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
 "
-"" map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+" map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 " \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 " \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+"""" dump current color scheme
+" :redir > current_highlighting 
+" :hi 
+" :redir END
 
 
 hi clear
@@ -162,11 +168,14 @@ hi Type         ctermfg=2 gui=None guifg=Green
 hi Directory    gui=None
 hi WikiCode     guifg=gray60
 hi mkdCode      guifg=gray60
+hi mkdIndentCode      guifg=gray60
 hi htmlLink	guifg=DarkGreen
 hi htmlString	guifg=Blue
 hi mkdLinkDef   guifg=Blue
 hi mkdLinkDefTarget guifg=Blue
 hi mkdID	guifg=Blue
+hi htmlH1 guifg=#1C9898 gui=bold
+hi htmlH2 guifg=#1C9898
 
 hi Folded guibg=black 
 
