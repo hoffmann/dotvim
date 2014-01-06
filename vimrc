@@ -105,37 +105,7 @@ set guioptions-=r
 "set gfn=Fixed\ Semi-Condensed\ 11
 "set gcr=a:blinkon0
 
-	
-
-"http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
-"color scheme
-"set bg=dark
-hi Normal guifg=white
-hi Normal guibg=black
-hi Comment ctermfg=1 guifg=DarkRed
-hi LineNr       ctermfg=4 guifg=darkblue
-hi Statement    ctermfg=5 gui=None guifg=#AA00AA
-hi Constant     ctermfg=3 guifg=Brown
-hi Identifier   ctermfg=4 guifg=Blue
-hi Type         ctermfg=2 gui=None guifg=Green
-hi Directory    gui=None
-hi WikiCode     guifg=gray60
-hi mkdCode      guifg=gray60
-hi htmlLink	guifg=DarkGreen
-hi htmlString	guifg=Blue
-hi mkdLinkDef   guifg=Blue
-hi mkdLinkDefTarget guifg=Blue
-hi mkdID	guifg=Blue
-
-hi Folded guibg=black 
-
-"fuer das popup menu. hintergrund dunkles grau, selektiertes item in gruen
-hi Pmenu ctermbg=232 ctermfg=white guibg=#444444  
-hi PmenuSel ctermbg=2 guibg=Green 
-
-" http://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim
-":so $VIMRUNTIME/syntax/hitest.vim
-"hi User1 guifg=Black guibg=DarkGreen ctermbg=2 ctermfg=black
+colorscheme ph
 
 set statusline=
 set statusline+=%1*\[%n]                                  "buffernr
