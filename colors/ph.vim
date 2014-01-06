@@ -7,6 +7,13 @@
 "       Thanks to Ryan Heath for an easy list of some of the colours:
 "       http://rpheath.com/posts/356-github-theme-for-syntax-gem
 
+"http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
+"
+"" map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+" \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+
 hi clear
 
 set background=dark
@@ -24,7 +31,7 @@ hi Normal       guifg=#FFFFFF guibg=#000000
 
 " {{{ Cursor
 hi Cursor		guibg=green guifg=#F8F8FF
-hi CursorLine	guibg=#D8D8DD
+hi CursorLine	guibg=#222222
 hi CursorColumn	guibg=#E8E8EE
 " }}}
 
@@ -76,7 +83,8 @@ hi Identifier	guifg=#0086B3
 hi PreProc		guifg=#A0A0A0 gui=bold
 hi Comment		guifg=#999988
 hi Constant		guifg=#177F80 gui=none
-hi String		guifg=#D81745
+"ph
+hi String		ctermfg=3     guifg=Brown
 hi Function		guifg=#990000 gui=bold
 hi Statement	guifg=#000000 gui=bold
 hi Type			guifg=#445588 gui=bold
@@ -126,6 +134,7 @@ hi link shVariable		Function
 hi link rubySharpBang	Special
 hi link perlSharpBang	Special
 hi link schemeFunc      Statement
+hi link pythonBuiltin   Identifier
 "hi link shSpecialVariables Constant
 "hi link bashSpecialVariables Constant
 " }}}

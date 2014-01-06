@@ -12,6 +12,7 @@ set history=1000
 
 set ignorecase 
 set smartcase
+set cursorline
 
 let g:SimpylFold_docstring_preview = 1
 
