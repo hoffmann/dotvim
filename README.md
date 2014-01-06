@@ -68,13 +68,23 @@ add newline when writing command
 
 ## folding
 
-    za      toglle Folding
+    za      toggle Folding
     zo      opens a fold at the cursor.
     zO      opens all folds at the cursor.
     zm      increases the foldlevel by one.
     zM      closes all open folds.
     zr      decreases the foldlevel by one.
     zR      decreases the foldlevel to zero -- all folds will be open.
+
+Python folding
+    
+    set foldmethod=syntax
+    " classes and functions are folded not more
+    set foldnestmax=2
+
+    nnoremap <space> za
+
+    vnoremap <space> zf
 
 ## tags
 

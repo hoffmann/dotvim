@@ -12,14 +12,15 @@ set history=1000
 
 set ignorecase 
 set smartcase
-set cursorline
-" disable blink 
-set guicursor+=n-v-c:blinkon0
 
 let g:SimpylFold_docstring_preview = 1
 
 syntax on
 filetype plugin indent on
+" OSX Map Ctrl-A -> Start of line, Ctrl-E -> End of line
+map <C-a> <Home>
+map <C-e> <End>
+
 imap <C-BS> <C-W>
 
 nnoremap <C-h> <C-w>h
@@ -46,6 +47,9 @@ inoremap <D-9> ]
 if has("gui_running")
     " C-Space seems to work under gVim on both Linux and win32
     inoremap <C-Space> <C-n>
+    set cursorline
+    " disable blink 
+    set guicursor+=n-v-c:blinkon0
 else " no gui
   if has("unix")
     inoremap <Nul> <C-n>
@@ -121,5 +125,4 @@ set statusline+=%1*\ %{(&bomb?\",BOM\":\"\")}\            "Encoding2
 set statusline+=%1*\ %{&ff}\                              "FileFormat (dos/unix..) 
 set statusline+=%1*\ %{&spelllang}\  "Spellanguage & Highlight on?
 set statusline+=%1*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
-
 
