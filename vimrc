@@ -12,6 +12,7 @@ set history=1000
 
 set ignorecase 
 set smartcase
+set cursorline
 
 let g:SimpylFold_docstring_preview = 1
 
@@ -35,6 +36,10 @@ noremap <C-b> :CtrlPBuffer<CR>
 imap <C-v> <ESC>"+pa
 
 map <C-n> :NERDTreeToggle<CR>
+
+"OSX mapping
+inoremap <D-8> [
+inoremap <D-9> ]
 
 if has("gui_running")
     " C-Space seems to work under gVim on both Linux and win32
@@ -94,44 +99,14 @@ set guioptions-=r
 
 " cursor see http://vim.sourceforge.net/tips/tip.php?tip_id=746 
 " and http://www.nabble.com/the-cursor-in-gvim-for-win32-td17234409.html
-set gcr=a:block
-highlight iCursor  guifg=white  guibg=green
-set gcr+=i:ver100-iCursor
+"set gcr=a:block
+"highlight iCursor  guifg=white  guibg=green
+"set gcr+=i:ver100-iCursor
 "X11 Version Scrift setzen, blinken aus
 "set gfn=Fixed\ Semi-Condensed\ 11
-set gcr=a:blinkon0
+"set gcr=a:blinkon0
 
-	
-
-"http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
-"color scheme
-set bg=dark
-hi Normal guifg=white
-hi Normal guibg=black
-hi Comment ctermfg=1 guifg=DarkRed
-hi LineNr       ctermfg=4 guifg=darkblue
-hi Statement    ctermfg=5 gui=None guifg=#AA00AA
-hi Constant     ctermfg=3 guifg=Brown
-hi Identifier   ctermfg=4 guifg=Blue
-hi Type         ctermfg=2 gui=None guifg=Green
-hi Directory    gui=None
-hi WikiCode     guifg=gray60
-hi mkdCode      guifg=gray60
-hi htmlLink	guifg=DarkGreen
-hi htmlString	guifg=Blue
-hi mkdLinkDef   guifg=Blue
-hi mkdLinkDefTarget guifg=Blue
-hi mkdID	guifg=Blue
-
-hi Folded guibg=black 
-
-"fuer das popup menu. hintergrund dunkles grau, selektiertes item in gruen
-hi Pmenu ctermbg=232 ctermfg=white guibg=#444444  
-hi PmenuSel ctermbg=2 guibg=Green 
-
-" http://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim
-":so $VIMRUNTIME/syntax/hitest.vim
-hi User1 guifg=Black guibg=DarkGreen ctermbg=2 ctermfg=black
+colorscheme ph
 
 set statusline=
 set statusline+=%1*\[%n]                                  "buffernr
