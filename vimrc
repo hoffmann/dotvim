@@ -13,6 +13,8 @@ set history=1000
 set ignorecase 
 set smartcase
 set cursorline
+" disable blink 
+set guicursor+=n-v-c:blinkon0
 
 let g:SimpylFold_docstring_preview = 1
 
