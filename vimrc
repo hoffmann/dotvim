@@ -30,6 +30,9 @@ nnoremap <C-l> <C-w>l
 nnoremap <silent> <C-PageUp> :bp<CR> 
 nnoremap <silent> <C-PageDown> :bn<CR> 
 
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+
 inoremap <C-Enter> <ESC>:Twrite 0<CR>a
 noremap <C-Enter> :Twrite 0<CR>
 
@@ -43,6 +46,10 @@ map <C-n> :NERDTreeToggle<CR>
 "OSX mapping
 inoremap <D-8> [
 inoremap <D-9> ]
+
+
+" CDC = Change to Directory of Current file
+command CDC cd %:p:h
 
 if has("gui_running")
     " C-Space seems to work under gVim on both Linux and win32

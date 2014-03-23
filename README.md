@@ -24,6 +24,7 @@ Bundles
     git clone https://github.com/lunaru/vim-twig.git
     git clone https://github.com/scrooloose/nerdtree.git
     git clone https://github.com/groenewege/vim-less
+    git clone https://github.com/tell-k/vim-autopep8.git
     #dependencies
     git clone https://github.com/tomtom/tlib_vim.git
     git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
