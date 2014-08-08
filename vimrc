@@ -10,18 +10,28 @@ set hidden                      "switch buffer without saving first
 let mapleader = ","
 set history=1000
 
+
 set ignorecase 
 set smartcase
 
 let g:SimpylFold_docstring_preview = 1
 
+set tags=tags;
+
 syntax on
 filetype plugin indent on
+autocmd BufRead,BufNewFile ~/nvalt/* set syntax=mkd
+autocmd BufWinEnter * set foldlevel=999999 
+
 " OSX Map Ctrl-A -> Start of line, Ctrl-E -> End of line
 map <C-a> <Home>
 map <C-e> <End>
 
 imap <C-BS> <C-W>
+
+"complete in statusbar 
+set wildmenu
+set wildmode=longest:full,full
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -41,7 +51,18 @@ noremap <C-b> :CtrlPBuffer<CR>
 
 imap <C-v> <ESC>"+pa
 
+nnoremap <leader>n :e ~/nvalt/
+set splitright
+
+map <Leader>m :CtrlPModified<CR>
+map <Leader>d :Pydocstring<CR>
+
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
+
+set nofoldenable    " disable folding
+set foldlevelstart=99
+set foldlevel=99
 
 "OSX mapping
 inoremap <D-8> [
@@ -133,3 +154,4 @@ set statusline+=%1*\ %{&ff}\                              "FileFormat (dos/unix.
 set statusline+=%1*\ %{&spelllang}\  "Spellanguage & Highlight on?
 set statusline+=%1*\ %=\ row:%l/%L\ (%03p%%)\             "Rownumber/total (%)
 
+color zellner
