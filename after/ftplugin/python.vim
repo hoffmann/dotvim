@@ -1,4 +1,4 @@
-set foldmethod=syntax
+"set foldmethod=syntax
 
 """"" Better Python folding
 " http://www.vim.org/scripts/script.php?script_id=1494
